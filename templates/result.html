@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}შედეგი{% endblock %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+    <div class="form-box mx-auto" style="max-width:500px;">
+        <h3>შენი იდეალური პროფესია:</h3>
+        <h1 class="text-primary">{{ faculty }}</h1>
+
+        <h5 class="mt-4">ალტერნატივები:</h5>
+        <ul class="list-group">
+            <li class="list-group-item">{{ alt1 }}</li>
+            <li class="list-group-item">{{ alt2 }}</li>
+        </ul>
+
+        <a href="/" class="btn btn-success mt-4">მთავარზე დაბრუნება</a>
+    </div>
+</div>
+{% endblock %}

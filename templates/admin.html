@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+
+<h2>Admin Panel</h2>
+
+<form method="POST" action="/admin/add" class="row g-2 mb-4">
+    <input name="name" class="form-control" placeholder="Name" required>
+    <input name="math" type="number" class="form-control" placeholder="Math" required>
+    <input name="tech" type="number" class="form-control" placeholder="Tech" required>
+    <input name="art" type="number" class="form-control" placeholder="Art" required>
+    <input name="social" type="number" class="form-control" placeholder="Social" required>
+    <button class="btn btn-success">Add Profession</button>
+</form>
+
+<ul class="list-group">
+{% for p in professions %}
+<li class="list-group-item d-flex justify-content-between">
+    {{ p.name }}
+    <a href="/admin/delete/{{ p.id }}" class="btn btn-danger btn-sm">Delete</a>
+</li>
+{% endfor %}
+</ul>
+
+<hr>
+
+<h4>Users</h4>
+<ul class="list-group">
+{% for u in users %}
+<li class="list-group-item">
+    {{ u.username }} {% if u.is_admin %}(ADMIN){% endif %}
+</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
