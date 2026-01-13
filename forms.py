@@ -12,7 +12,7 @@ class TestForm(FlaskForm):
         validators=[DataRequired()]
     )
     q2 = RadioField(
-        "გიყვარს მონაცემების ანალიზება და გამოთვლა?",
+        "გიყვარს მონაცემების ანალიზი?",
         choices=choices,
         validators=[DataRequired()]
     )
@@ -23,18 +23,18 @@ class TestForm(FlaskForm):
         validators=[DataRequired()]
     )
     q4 = RadioField(
-        "ხშირად მუშაობ კომპიუტერებთან?",
+        "ხშირად მუშაობ კომპიუტერთან?",
         choices=choices,
         validators=[DataRequired()]
     )
 
     q5 = RadioField(
-        "გიყვარს ხატვა, დიზაინების მოფიქრება ან კრეატიული საქმიანობა?",
+        "გიყვარს კრეატიული საქმიანობა? მაგ:ხატვა",
         choices=choices,
         validators=[DataRequired()]
     )
     q6 = RadioField(
-        "თავი კრეატიულად მიგაჩნია?",
+        "თავი კრეატიული მიგაჩნია?",
         choices=choices,
         validators=[DataRequired()]
     )
@@ -63,3 +63,4 @@ class TestForm(FlaskForm):
     )
 
     submit = SubmitField("შედეგის ნახვა")
+
